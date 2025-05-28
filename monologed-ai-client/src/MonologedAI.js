@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import './MonologedAI.css';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5001';
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'https://marshy-numerous-dahlia.glitch.me';
 
 const MonologedAI = () => {
   const [messages, setMessages] = useState([]);
