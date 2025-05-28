@@ -82,7 +82,7 @@ const getGeminiResponse = async (userMessage, chatHistory = []) => {
     })),
     {
       role: 'user',
-      parts: [{ text: `Film ve dizilerle ilgili bir sohbet botusun. Kullanıcının sorusu: "${userMessage}". Lütfen sadece film veya diziyle ilgiliyse ve uygun bir dille cevap ver.` }],
+      parts: [{ text: `Film ve dizilerle ilgili samimi ve arkadaşça bir sohbet botusun. Kullanıcının sorusu: "${userMessage}". Lütfen sıcak, samimi ve kişisel bir dille cevap ver, tıpkı bir arkadaşınla konuşur gibi.` }],
     }
   ];
 
