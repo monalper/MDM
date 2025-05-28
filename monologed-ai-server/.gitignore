@@ -1,0 +1,39 @@
+# Bağımlılıklar
+node_modules/
+monologed-ai-client/node_modules/
+monologed-ai-server/node_modules/
+
+# Build çıktıları
+monologed-ai-client/build/
+build/
+
+# İşletim sistemi dosyaları
+.DS_Store
+Thumbs.db
+
+# Ortam değişkenleri dosyaları (ASLA GitHub'a YÜKLEMEYİN!)
+.env
+.env.*
+!/.env.example
+monologed-ai-client/.env
+monologed-ai-client/.env.*
+!monologed-ai-client/.env.example
+monologed-ai-server/.env
+monologed-ai-server/.env.*
+!monologed-ai-server/.env.example
+
+# Log dosyaları
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+logs
+*_logs/
+# Aşağıdaki satırı kendi npm log yolunuza göre düzenleyin veya kaldırın
+# C:\Users\Alper\AppData\Local\npm-cache\_logs\
+
+# Editör ve IDE dosyaları (opsiyonel)
+.vscode/
+.idea/
+*.iml
+*.suo

@@ -1,0 +1,27 @@
+/* src/index.css */
+
+/* Tailwind CSS direktifleri (@tailwind base; vb.) kaldırıldı.
+  Chakra UI kendi temel stillerini ve sıfırlamalarını sağlar.
+*/
+
+/* Buraya tüm uygulamada geçerli olmasını istediğiniz çok temel global stilleri 
+  veya özel font importlarını ekleyebilirsiniz.
+  Örneğin:
+*/
+
+/*
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5; /* Örnek bir arka plan rengi */
+/* } 
+*/
+
+/* Chakra UI genellikle kendi fontlarını ve temel stillerini yönetir,
+   bu yüzden bu dosya çoğu zaman boş bırakılabilir veya sadece
+   çok spesifik global ayarlar için kullanılabilir. */
+
