@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/MDM/static/css/main.45d6f1c8.css",
+    "main.js": "/MDM/static/js/main.fd23b432.js",
+    "index.html": "/MDM/index.html",
+    "main.45d6f1c8.css.map": "/MDM/static/css/main.45d6f1c8.css.map",
+    "main.fd23b432.js.map": "/MDM/static/js/main.fd23b432.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45d6f1c8.css",
+    "static/js/main.fd23b432.js"
+  ]
+}
