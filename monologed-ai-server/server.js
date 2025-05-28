@@ -5,9 +5,14 @@ import cors from 'cors';
 import AWS from 'aws-sdk'; // AWS SDK'sını import ediyoruz
 import { v4 as uuidv4 } from 'uuid'; // Benzersiz ID'ler oluşturmak için uuid
 import fetch from 'node-fetch'; // Gemini API'ye istek yapmak için
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 // Ortam değişkenlerini .env dosyasından yüklemek için dotenv'i yapılandırıyoruz
 dotenv.config();
+// ESM'de __dirname'i oluşturmak için
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Express uygulamasını başlatıyoruz
 const app = express();
@@ -17,6 +22,8 @@ app.use(cors());
 
 // JSON request body'lerini parse etmek için middleware
 app.use(express.json());
+// React client build klasörünü statik olarak sun
+app.use(express.static(path.join(__dirname, '../monologed-ai-client/build')));
 
 // AWS SDK'sını yapılandırıyoruz
 AWS.config.update({
@@ -183,6 +190,11 @@ app.get('/api/chat/:sessionId', async (req, res) => {
     console.error(`Oturum ${req.params.sessionId} mesajları alınırken hata:`, error);
     res.status(500).json({ error: 'Mesajlar alınırken sunucuda bir hata oluştu.' });
   }
+});
+
+// Tüm diğer isteklerde React uygulamasını döndür
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../monologed-ai-client/build', 'index.html'));
 });
 
 const PORT = process.env.PORT || 5001;

@@ -1,0 +1,17 @@
+{
+  "name": "monologed-ai",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install": "npm install --prefix monologed-ai-server && npm install --prefix monologed-ai-client && npm run build --prefix monologed-ai-client",
+    "start": "node monologed-ai-server/server.js"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1604.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "node-fetch": "^3.3.2",
+    "uuid": "^9.0.1"
+  }
+} 
